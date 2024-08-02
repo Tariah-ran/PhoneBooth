@@ -1,0 +1,88 @@
+<html>
+<head>
+<title> PHONE BOOT</title>
+<link rel="stylesheet" href="styles.css">
+
+
+</head>
+<body>
+    <div class="main">
+        <nav>
+            <div class="logo">
+            <img src ="logo.jpg">
+            </div>
+             <!-- these are the links to my accessories, logout page,and phones-->
+            <div class="nav-links">
+                <ul>
+
+                    <li><a href="#">Home</a></li>
+                    <li><a href="pho.html">Phone</a></li>
+                    <li><a href="accessories.html">Accessories</a></li>
+                    <li><a href="logout.php">LogOut</a></li>
+                    
+                </ul>
+
+            </div>
+             <!-- creating rotating images-->
+        </nav>
+        <div class="information">
+            <div class="overlay"></div>
+            <img src="mobile.png" class="mobile">
+            <div id="circle">
+                <div class="feature one">
+                    <img src="camera.png">
+                    <div>
+                        <h1>camera</h1>
+                        <p>12mega pixel</p>
+                    </div>
+
+                </div>
+                <div class="feature two">
+                    <img src="processor.png">
+                    <div>
+                        <h1>processor</h1>
+                        <p>Snapdragon Octa-core 11nm</p>
+                    </div>
+                </div>
+                <div class="feature three">
+                    <img src="display1.png">
+                    <div>
+                        <h1>Display</h1>
+                        <p>6.5" mini-Drop full screen</p>
+                    </div>
+                </div>
+               
+                </div>
+            </div>
+        </div>
+         <!-- creating my up and down button-->
+        <div class="controls">
+            <img src="uparrow.png" id="upBtn">
+            <h3>features</h3>
+            <img src="uparrow.png" id="downBtn">
+        </div>
+    </div>
+     <!-- a javascript function to make it rotate-->
+    <script>
+        var circle = document.getElementById("circle");
+        var upBtn = document.getElementById("upBtn");
+        var downBtn = document.getElementById("downBtn");
+        var rotateValue = circle.style.transform;
+
+        var rotateSum;
+
+        upBtn.onclick = function(){
+            rotateSum= rotateValue + "rotate(-90deg)";
+            circle.style.transform=rotateSum;
+            rotateValue=rotateSum;
+        }
+        downBtn.onclick = function(){
+            rotateSum= rotateValue + "rotate(90deg)";
+            circle.style.transform=rotateSum;
+            rotateValue=rotateSum;
+        }
+    </script>
+</body>
+
+
+</html>
